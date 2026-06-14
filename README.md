@@ -85,4 +85,74 @@ This repository contains my JavaScript revision notes and practice code for inte
 
 ---
 
+What is a Variable?
+
+A variable is a container that stores data.
+
+let name = "Sibtain";
+let age = 21;
+1. var
+
+Old way of declaring variables.
+
+var city = "Patna";
+Properties
+
+✅ Can be redeclared
+
+var a = 10;
+var a = 20;
+
+✅ Can be reassigned
+
+var a = 10;
+a = 30;
+
+❌ Not block scoped
+
+if (true) {
+    var x = 100;
+}
+
+console.log(x); // 100
+2. let
+
+Modern way when value may change.
+
+let score = 50;
+Properties
+
+❌ Cannot be redeclared
+
+let a = 10;
+let a = 20; // Error
+
+✅ Can be reassigned
+
+let a = 10;
+a = 20;
+
+✅ Block scoped
+
+if (true) {
+    let x = 100;
+}
+
+console.log(x); // Error
+3. const
+
+Used when value should not change.
+
+const PI = 3.14;
+Properties
+
+❌ Cannot be redeclared
+
+❌ Cannot be reassigned
+
+const PI = 3.14;
+PI = 5; // Error
+
+✅ Block scoped
+
 ⭐ If you find these notes useful, feel free to star the repository.
