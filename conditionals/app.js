@@ -45,8 +45,8 @@ false && false == false
 */
 
 //
-let age = 19;
-let hasId = false;
+// let age = 19;
+// let hasId = false;
 
 // if(age >= 18 && hasId === true){
 //     console.log("You can entered the club")
@@ -56,6 +56,29 @@ let hasId = false;
 
 //or logical op
 
-if(age >= 17 || hasId === true){
-    console.log("you may entered the club")
-}
+// if(age >= 17 || hasId === true){
+//     console.log("you may entered the club")
+// }
+
+//Falsey Values ---> A falsey valye is considered false when converted into a boolean
+
+/* 
+undefined
+null
+NaN
+0
+""(empty string)
+false
+*/
+
+let isRaining = true
+
+isRaining ? console.log("it is rainig") : console.log("it is not raining");
+
+
+let age = 19;
+let hasId = true;
+
+let str = age >=18 && hasId ? "You may entered the club" : "You may not entered the club";
+
+console.log(str);
