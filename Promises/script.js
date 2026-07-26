@@ -1,33 +1,33 @@
-const promiseOne = new Promise((res, rej) => {
-    setTimeout(() => {
-        console.log("Async task is compelete");
-        res();
-    }, 1000)
-});
-promiseOne.then(function () {
-    console.log("promise consumed");
+// const promiseOne = new Promise((res, rej) => {
+//     setTimeout(() => {
+//         console.log("Async task is compelete");
+//         res();
+//     }, 1000)
+// });
+// promiseOne.then(function () {
+//     console.log("promise consumed");
 
-})
+// })
 
 
-new Promise(function (resolve, reject) {
-    setTimeout(() => {
-        console.log("Async code 2");
-        resolve();
-    }, 1000)
-}).then(() => {
-    console.log("Async code 2 resolved");
+// new Promise(function (resolve, reject) {
+//     setTimeout(() => {
+//         console.log("Async code 2");
+//         resolve();
+//     }, 1000)
+// }).then(() => {
+//     console.log("Async code 2 resolved");
 
-})
+// })
 
-new Promise((res, rej) => {
-    setTimeout(() => {
-        console.log("Async code 3 ");
-        res({ username: "Sibtain", password: "12345678" });
-    }, 1000)
-}).then((user) => {
-    console.log(user);
-})
+// new Promise((res, rej) => {
+//     setTimeout(() => {
+//         console.log("Async code 3 ");
+//         res({ username: "Sibtain", password: "12345678" });
+//     }, 1000)
+// }).then((user) => {
+//     console.log(user);
+// })
 
 const promiseFour = new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -46,8 +46,32 @@ promiseFour.then((user) => {
 }).then((username)=>{
     console.log(username);
 }).catch((error)=>{
-    console.log(error);
+    console.log(error); 
 }).finally(()=>{
     console.log("The promise is either resolved or rejected");
     
 })
+
+const promiseFive = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        let error = true;
+        console.log("promis of js complete");
+        if (!error) {
+            resolve({ username: "Javascript", password: "123" })
+        }else{
+            reject("ERROR: js went wrong.");
+        }
+    })
+})
+
+async function consumePromiseFive(){
+    try {
+        const response = await promiseFive;
+        console.log(response);
+        
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+consumePromiseFive();
