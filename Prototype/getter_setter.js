@@ -4,19 +4,19 @@ class User {
         this.password = password;   // Fixed
     }
 
-    get email() {
+    get email() { // get email
         return this._email.toUpperCase();
     }
 
-    set email(value) {
+    set email(value) { // setter email
         this._email = value;
     }
 
-    get password() {
+    get password() { // get password
         return this._password.toUpperCase();
     }
 
-    set password(value) {
+    set password(value) { // set password
         this._password = value;
     }
 }
